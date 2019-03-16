@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1552755050 "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.tex" "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.pdf" "relazione" 1552755050
-  "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux" 1552755050 1656 279e4415bb8f8c19c39db013c520e161 ""
-  "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.tex" 1552755049 10582 998cef3ae13efc51b98f9de0f7340e64 ""
+["pdflatex"] 1552760235 "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.tex" "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.pdf" "relazione" 1552760236
+  "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux" 1552760235 2226 08a07e5cd06a582f40676993fe8bb530 ""
+  "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.tex" 1552760234 13533 ba1083699497d11db6907a01fbbc6bec ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -112,6 +112,7 @@
   "/usr/local/texlive/2018/texmf-dist/tex/latex/base/size12.clo" 1544567569 8305 6a682ae291edd56e2d7accbf95eca451 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty" 1539032178 68576 86bbc6bd5a409b3c353fccc1a815fa5b ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty" 1538606650 68510 943558eecf41da4e76fc614fd7f5deff ""
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1534713891 43865 f83cc2fa3767abdb988c7d2cd17c02bf ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1480098830 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1480098830 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def" 1515537368 17334 520b9b85ad8a2a48eda3f643e27a5179 ""
@@ -127,6 +128,7 @@
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty" 1463608860 12095 5337833c991d80788a43d3ce26bd1c46 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty" 1463608860 7075 2fe3d848bba95f139de11ded085e74aa ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1463608860 22417 1d9df1eb66848aa31b18a593099cf45c ""
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty" 1536789184 3936 325586b5a40940baeb47386505e0e61d ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1546728038 1090 d20f587ea9464d1841bd0d13d3ff9856 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1288312291 410 5bf12ea7330e5f12c445332a4fe9a263 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1546728038 21013 e98e1aaaf40d31632787c2bd25d24b57 ""
@@ -152,11 +154,11 @@
   "/usr/local/texlive/2018/texmf.cnf" 1547112977 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "functionTypes.png" 1552505674 10127 0408649b70b50a3c8ec05f5a161b89dd ""
   "logo.png" 1547107337 141811 e2789f0f1736db4c865fbd812a3fed54 ""
-  "relazione.aux" 1552755050 1656 279e4415bb8f8c19c39db013c520e161 ""
-  "relazione.tex" 1552755049 10582 998cef3ae13efc51b98f9de0f7340e64 ""
+  "relazione.aux" 1552760235 2226 08a07e5cd06a582f40676993fe8bb530 ""
+  "relazione.tex" 1552760234 13533 ba1083699497d11db6907a01fbbc6bec ""
   (generated)
-  "relazione.aux"
-  "relazione.pdf"
-  "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.pdf"
   "relazione.log"
+  "relazione.pdf"
   "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.log"
+  "relazione.aux"
+  "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.pdf"

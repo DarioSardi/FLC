@@ -58,8 +58,14 @@ public class Variable {
                             }
                             break;
             case "Register":
-                            valueI=Integer.parseInt(value_);
-                            e.debug("defined new " +this.type+" variable with value "+valueI);
+                            Integer temp=Integer.parseInt(value_);
+                            if(temp<=30){
+                                valueI=temp;
+                                e.debug("defined new " +this.type+" variable with value "+valueI+" named "+name_);}
+                            else{
+                                valueI=0;
+                                e.debug("variable "+name_+" is too big for register-type, set to 0");
+                            }
                             break;
 
         }

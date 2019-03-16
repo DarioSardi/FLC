@@ -117,8 +117,11 @@ fI	returns [function3I f]:
 
 register returns [String val]:	 '0x' i=INT 
 			{
-			checkRegister($i);
-			$val=$i.getText();
+			if(checkRegister($i)){
+			$val=$i.getText();}
+			else{
+			Integer temp=1/0;
+			}
 			}
 		|s=STRING{
 			String type=env.checkVariable($s.getText());

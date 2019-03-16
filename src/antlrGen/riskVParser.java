@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/panda/Documenti/lab flc/RiskV/resources/riskV.g 2019-03-13 23:32:45
+// $ANTLR 3.5.1 /home/panda/Documenti/lab flc/RiskV/resources/riskV.g 2019-03-16 19:12:57
 
   package antlrGen;
   import extraClass.*;
@@ -768,13 +768,16 @@ public class riskVParser extends Parser {
 					match(input,25,FOLLOW_25_in_register371); 
 					i=(Token)match(input,INT,FOLLOW_INT_in_register375); 
 
-								checkRegister(i);
-								val =i.getText();
+								if(checkRegister(i)){
+								val =i.getText();}
+								else{
+								Integer temp=1/0;
+								}
 								
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:123:4: s= STRING
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:126:4: s= STRING
 					{
 					s=(Token)match(input,STRING,FOLLOW_STRING_in_register388); 
 
@@ -808,7 +811,7 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "immediateVar"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:136:1: immediateVar returns [Variable v] : STRING ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:139:1: immediateVar returns [Variable v] : STRING ;
 	public final Variable immediateVar() throws RecognitionException {
 		Variable v = null;
 
@@ -816,8 +819,8 @@ public class riskVParser extends Parser {
 		Token STRING1=null;
 
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:137:2: ( STRING )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:137:4: STRING
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:140:2: ( STRING )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:140:4: STRING
 			{
 			STRING1=(Token)match(input,STRING,FOLLOW_STRING_in_immediateVar404); 
 
@@ -846,13 +849,13 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "jumpCond"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:149:1: jumpCond : c= condition '\\n' j= jumpUnc ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:1: jumpCond : c= condition '\\n' j= jumpUnc ;
 	public final void jumpCond() throws RecognitionException {
 		Integer j =null;
 
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:149:9: (c= condition '\\n' j= jumpUnc )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:149:11: c= condition '\\n' j= jumpUnc
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:9: (c= condition '\\n' j= jumpUnc )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:11: c= condition '\\n' j= jumpUnc
 			{
 			pushFollow(FOLLOW_condition_in_jumpCond419);
 			condition();
@@ -880,11 +883,11 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "condition"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:151:1: condition : CMP register register ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:154:1: condition : CMP register register ;
 	public final void condition() throws RecognitionException {
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:2: ( CMP register register )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:4: CMP register register
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:2: ( CMP register register )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:4: CMP register register
 			{
 			match(input,CMP,FOLLOW_CMP_in_condition437); 
 			pushFollow(FOLLOW_register_in_condition439);
@@ -911,7 +914,7 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "jumpUnc"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:154:1: jumpUnc returns [Integer line] : JMP labellino= STRING ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:157:1: jumpUnc returns [Integer line] : JMP labellino= STRING ;
 	public final Integer jumpUnc() throws RecognitionException {
 		Integer line = null;
 
@@ -919,8 +922,8 @@ public class riskVParser extends Parser {
 		Token labellino=null;
 
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:2: ( JMP labellino= STRING )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:4: JMP labellino= STRING
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:158:2: ( JMP labellino= STRING )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:158:4: JMP labellino= STRING
 			{
 			match(input,JMP,FOLLOW_JMP_in_jumpUnc455); 
 			labellino=(Token)match(input,STRING,FOLLOW_STRING_in_jumpUnc459); 
@@ -944,13 +947,13 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "label"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:159:1: label : s= STRING TWODOT ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:162:1: label : s= STRING TWODOT ;
 	public final void label() throws RecognitionException {
 		Token s=null;
 
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:159:8: (s= STRING TWODOT )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:159:11: s= STRING TWODOT
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:162:8: (s= STRING TWODOT )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:162:11: s= STRING TWODOT
 			{
 			s=(Token)match(input,STRING,FOLLOW_STRING_in_label473); 
 			match(input,TWODOT,FOLLOW_TWODOT_in_label475); 

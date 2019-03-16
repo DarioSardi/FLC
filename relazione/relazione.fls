@@ -170,6 +170,22 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux
 INPUT /home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux
 OUTPUT /home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux
@@ -179,22 +195,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
