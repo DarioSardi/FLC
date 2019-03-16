@@ -24,6 +24,7 @@ public class Environment {
     }
     public void getErrors(){
         if(errors.size()>0){
+            System.out.println("ERRORS:");
         for (int i=0;i<errors.size();i++) {
 	    	System.out.println((i+1) + ".\t" + errors.get(i));
 	    }}
@@ -47,7 +48,7 @@ public class Environment {
         if (variables.containsKey(var.getText()))
             errors.add("Semantic Error [" + var.getLine() +
                     ", " + var.getCharPositionInLine() + "] :" +
-                    " variable " + var.getText() + " has been already defined");
+                    " variable " + var.getText() + " has been already defined,value unchanged");
         else {
 
             Variable tempV= new Variable(this,var.getText(),type,value);
@@ -58,8 +59,7 @@ public class Environment {
     public String checkVariable (String name){
         Variable v;
         if(variables.containsKey(name)){
-          //return variables.get(name).type;
-            return "ok";
+          return variables.get(name).type;
         }
         else return "No variable named "+name+",stopping parser!\n";
     }
@@ -95,7 +95,7 @@ public class Environment {
     }
 
     public void debug(String s){
-        System.out.println("found a "+s);
+        System.out.println(s);
     }
 
 

@@ -1,12 +1,8 @@
-condizioni:
+  condizioni:
 30 registri
-errori di inizializzazione o parametri errati autocorretti con parametri settati a 0 
-label di jump definiti come ( LABEL: ) se ripetuti vengono ignorati e considerao solo il primo
+errori di  inizializzazione o parametri errati autocorretti con parametri settati a 0 
+label di jump definiti come ( LABEL: ) se ripetuti vengono ignorati e considero solo il primo
 variabili statiche.Non mutabili.
-//TODO
-variabili dinamiche con aggiornamento in caso di funzioni aritmetiche e logiche
-
-
 errori considerati:
 - registri
     registro inesistente, valore troppo alto (superiore ai 30)
@@ -16,7 +12,7 @@ errori considerati:
     variabili non ancora inizializzate
     variabili con valori che non siano interi
 -funzioni
-    //
+    //errore se inserisco interi al posto di registri e vice.
 -loop
     se label esiste gia 
     -se non esiste

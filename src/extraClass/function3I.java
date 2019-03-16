@@ -9,7 +9,8 @@ public class function3I {
         e=e_;
     }
     public void print(){
-       // System.out.println("creata "+operation+" tra "+source1+" e "+source2+" da salvare in "+Integer.parseInt(destination));
+        int s1= Integer.parseInt(source1); int d= Integer.parseInt(destination);
+        e.debug("created "+operation+" between "+s1+" and "+source2+" to be saved at "+d);
         e.translatef3I(this);
     }
 

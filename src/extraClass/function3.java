@@ -8,7 +8,8 @@ public class function3 {
         e=e_;
     }
     public void print(){
-        //System.out.println("creata "+operation+" tra "+source1+" e "+source2+" da salvare in "+destination);
+        int s1= Integer.parseInt(source1); int s2= Integer.parseInt(source2); int d= Integer.parseInt(destination);
+        e.debug("created "+operation+" between "+s1+" and "+s2+" to be saved at "+d);
         e.translatef3(this);
     }
 

@@ -14,17 +14,17 @@ public class runner {
             String fileIn = "./resources/input.file";
 
             try {
-                System.out.println ("----- INIZIO PARSING -------");
+                System.out.println ("----- PARSING STARTED-------");
                 riskVLexer lexer = new riskVLexer(new ANTLRReaderStream(new FileReader(fileIn)));
                 tokens = new CommonTokenStream(lexer);
                 //System.out.print(tokens);
                 parser = new riskVParser(tokens);
                 parser.start();
-                System.out.println("----- FINE PARSING -------");
+                System.out.println("----- PARSING DONE -------");
                 parser.getEnv().getErrors();
 
             } catch (Exception e) {
-                System.out.println ("\n#############################\n#ERRORE! PARSING INTERROTTO!#\n#############################\n");
+                System.out.println ("\n#############################\n#  ERROR! PARSING STOPPED!  #\n#############################\n");
                 parser.getEnv().getErrors();
                 e.printStackTrace();
             }

@@ -17,6 +17,7 @@ public class Variable {
         name=name_;
         e=e_;
         typeSet(type_);
+        e.debug("defined new " +this.type+" variable with value "+valueI);
     }
     public Variable(Environment e_,String name_, String type_, String value_){
         name=name_;
@@ -35,15 +36,19 @@ public class Variable {
                             }
                             else {e.addError("variable value is not bit type (max value 256), "+name_+" set to 0");
                                 valueI=0;
+
                             }
+                            e.debug("defined new " +this.type+"-type variable with value "+valueI+" named "+name_);
                             break;
             case "Word":    if(i<=Math.pow(2,12)){
                                 valueL=Long.parseLong(value_);
+
                             }
-                            else {e.addError("variable value is not Word type, "+name_+" set to 0");
+                            else {e.addError("variable value is not Word type (max value 4096), "+name_+" set to 0");
                                 valueL=0L;
 
                             }
+                            e.debug("defined new " +this.type+"-type variable with value "+valueL+" named "+name_);
                             break;
             case "Double":  if(i<=Math.pow(2,32)){
                                 valueD=Double.parseDouble(value_);
@@ -51,6 +56,10 @@ public class Variable {
                             else {e.addError("variable value is not Double type, "+name_+" set to 0");
                                 valueD=0.0;
                             }
+                            break;
+            case "Register":
+                            valueI=Integer.parseInt(value_);
+                            e.debug("defined new " +this.type+" variable with value "+valueI);
                             break;
 
         }
@@ -67,19 +76,24 @@ public class Variable {
                 break;
             case "D":   type="Double";
                 break;
+            case "R":   type="Register";
+                break;
 
         }
-        e.debug("set var \'"+name+"\' to "+type);
 
     }
 
 
     //TODO TUTTO A LONG!
     public Long getValue(){
-        if(type=="Byte"){
+        if(type=="Byte" || type=="Register"){
             return Long.valueOf(valueI);
         }
         else return valueL;
+    }
+
+    public Integer getRegister(){
+        return valueI;
     }
 
 }
