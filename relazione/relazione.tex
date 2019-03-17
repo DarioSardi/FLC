@@ -142,7 +142,7 @@ created OR between 12 and 2 to be saved at 5
 added label li
 created ADD between 7 and 5 to be saved at 22
 created AND between 7 and 5 to be saved at 23
-jump to line 3 if condition is true
+jump to li at line 3 if condition is true
 created OR between 22 and 23 to be saved at 24
 <@\textcolor{purple}{----- PARSING DONE -------}@>
 \end{lstlisting}
@@ -180,11 +180,11 @@ La sintassi per dichiarare il nome di un registro è:
 \begin{lstlisting}[numbers=none]
     <@\textcolor{purple}{DR}@> <@\textcolor{orange}{etichetta}@> <@\textcolor{blue}{0xNumeroDiRegistro}@>
 \end{lstlisting}
-Una definizione valida puo dunque essere
+Una definizione valida può dunque essere
 \begin{lstlisting}[numbers=none]
     <@\textcolor{purple}{DR}@> <@\textcolor{orange}{RegistroA}@> <@\textcolor{blue}{0x9}@>
 \end{lstlisting}
-Si ricorda il valore massimo assegnabile a un registro pari a 0x30 per specifiche precedentemente definite.
+Si ricorda che il valore massimo assegnabile ad un registro è pari a 0x30 per specifiche precedentemente definite.
 Per quanto riguarda le variabili, si possono creare variabili numeriche statiche di tipo Byte e Word.
 Risulta possibile riservare una variabile senza inizializzarla attraverso il comando RESB per riservare un Byte  e RESW per riservare una Word.
 Esempio di variabili riservate sono
@@ -409,6 +409,7 @@ Nel caso di label ripetuti solo il primo viene considerato e i successivi vengon
     1.	label 'jumplabel' at line 4 already exist, 
         ignoring it.
 \end{lstlisting}
+\newpage
 Nel caso di salti a label non esistenti il programma si interrompe segnalando l'errore.
 \begin{lstlisting}[caption=input]
     <@\textcolor{orange}{jumplabel}@> :
