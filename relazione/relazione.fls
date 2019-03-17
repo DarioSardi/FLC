@@ -241,11 +241,15 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /home/panda/Documenti/lab flc/RiskV/relazione/functionTypes.png
 INPUT /home/panda/Documenti/lab flc/RiskV/relazione/functionTypes.png
 INPUT /home/panda/Documenti/lab flc/RiskV/relazione/functionTypes.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb

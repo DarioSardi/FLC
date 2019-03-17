@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.10)  16 MAR 2019 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.10)  17 MAR 2019 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -414,18 +414,18 @@ Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 )) (/home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux)
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -465,7 +465,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 50.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 67.
 
 \c@lstlisting=\count145
 Package caption Info: Begin \AtBeginDocument code.
@@ -476,12 +476,12 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 <logo.png, id=29, 421.575pt x 281.05pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 106.
+Package pdftex.def Info: logo.png  used on input line 123.
 (pdftex.def)             Requested size: 210.78697pt x 140.52464pt.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </home/panda/Documenti/lab flc/RiskV/relazione/logo.png>] [1]
-Overfull \hbox (7.24042pt too wide) in paragraph at lines 162--164
+Overfull \hbox (7.24042pt too wide) in paragraph at lines 178--180
 []\OT1/cmr/m/n/12 E pre-visto l'utilizzo di vari-abili statiche per etichettare reg-istri o val-ori notevoli.
  []
 
@@ -489,27 +489,32 @@ Overfull \hbox (7.24042pt too wide) in paragraph at lines 162--164
 <functionTypes.png, id=55, 936.49875pt x 109.40875pt>
 File: functionTypes.png Graphic file (type png)
 <use functionTypes.png>
-Package pdftex.def Info: functionTypes.png  used on input line 241.
+Package pdftex.def Info: functionTypes.png  used on input line 257.
 (pdftex.def)             Requested size: 468.24823pt x 54.70422pt.
 
-Overfull \hbox (78.24823pt too wide) in paragraph at lines 241--242
+Overfull \hbox (78.24823pt too wide) in paragraph at lines 257--258
  [][] 
  []
 
-[5 </home/panda/Documenti/lab flc/RiskV/relazione/functionTypes.png (PNG copy)>] [6] [7] (/home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux) ) 
+[5 </home/panda/Documenti/lab flc/RiskV/relazione/functionTypes.png (PNG copy)>] [6] [7]
+Overfull \hbox (6.41951pt too wide) in paragraph at lines 335--338
+\OT1/cmr/m/n/12 Chiamate in-con-dizion-ate si ef-fet-tuano tramite "JMP" se-guito dal la-bel desider-
+ []
+
+[8] [9] [10] [11] [12] [13] (/home/panda/Documenti/lab flc/RiskV/relazione/relazione.aux) ) 
 Here is how much of TeX's memory you used:
- 17140 strings out of 492616
- 321472 string characters out of 6128967
- 397072 words of memory out of 5000000
- 20726 multiletter control sequences out of 15000+600000
- 11810 words of font info for 42 fonts, out of 8000000 for 9000
+ 17270 strings out of 492616
+ 322850 string characters out of 6128967
+ 503633 words of memory out of 5000000
+ 20854 multiletter control sequences out of 15000+600000
+ 12276 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,92p,844b,1084s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.pdf" (8 pages, 246482 bytes).
+ 62i,8n,92p,844b,1299s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on "/home/panda/Documenti/lab flc/RiskV/relazione/relazione.pdf" (14 pages, 285161 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

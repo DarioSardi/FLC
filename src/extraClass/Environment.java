@@ -85,7 +85,7 @@ public class Environment {
     public Integer checkLabel(Token t) throws MismatchedTokenException{
         String name=t.getText();
         Integer Cline= t.getLine();
-        debug("label check for "+name);
+        //debug("label check for "+name);
         Boolean ans= labels.containsKey(name);
         if(!ans){
             errors.add("Label "+name+" at line "+Cline+" does not exist! STOPPING PARSER!");

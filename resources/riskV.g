@@ -43,7 +43,7 @@ options {
 
 start:{init();}  line*;
 //function itself
-line:	(r3Type | r3IType | defineVar |reserveVar |defineRegister | jumpUnc {env.debug("jump");} | jumpCond | label | ERROR) '\n';
+line:	(r3Type | r3IType | defineVar |reserveVar |defineRegister | jumpUnc {env.debug("jump to "+$jumpUnc.jumpto);} | jumpCond | label | ERROR) '\n';
 
 //REGISTER TYPE VALUE/REGISTER
 defineVar	:	
@@ -149,14 +149,15 @@ immediateVar returns [Variable v]
 		}
 	;
 
-jumpCond:	c=condition '\n' j=jumpUnc  {env.debug("jump to line "+$j.line+" if condition is true");};
+jumpCond:	c=condition '\n' j=jumpUnc  {env.debug("jump to "+$j.jumpto+" if condition is true");};
 
 condition
-	:	CMP register register ;
+	:	CMP r1=register r2=register {env.debug("comparing register "+$r1.val+" to "+$r2.val );};
 
-jumpUnc returns [Integer line]
+jumpUnc returns [String jumpto]
 	:	JMP labellino=STRING{
-		$line=env.checkLabel($labellino);
+		Integer line=env.checkLabel($labellino);
+		$jumpto=$labellino.getText()+" at line "+line;
 	};
 	
 label 	:	 s=STRING TWODOT{
@@ -193,5 +194,5 @@ WS  :   (
         )+ {$channel=HIDDEN;}
     ;
 
-STRING	:	('a'..'z')+;
+STRING	:	('a'..'z'|'A'..'Z')+;
 ERROR: . {System.out.println("what?...");} ;

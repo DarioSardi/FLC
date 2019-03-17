@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/panda/Documenti/lab flc/RiskV/resources/riskV.g 2019-03-16 19:12:57
+// $ANTLR 3.5.1 /home/panda/Documenti/lab flc/RiskV/resources/riskV.g 2019-03-17 23:38:16
 
   package antlrGen;
   import extraClass.*;
@@ -137,6 +137,8 @@ public class riskVParser extends Parser {
 	// $ANTLR start "line"
 	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:1: line : ( r3Type | r3IType | defineVar | reserveVar | defineRegister | jumpUnc | jumpCond | label | ERROR ) '\\n' ;
 	public final void line() throws RecognitionException {
+		String jumpUnc1 =null;
+
 		try {
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:5: ( ( r3Type | r3IType | defineVar | reserveVar | defineRegister | jumpUnc | jumpCond | label | ERROR ) '\\n' )
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:7: ( r3Type | r3IType | defineVar | reserveVar | defineRegister | jumpUnc | jumpCond | label | ERROR ) '\\n'
@@ -253,14 +255,14 @@ public class riskVParser extends Parser {
 					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:67: jumpUnc
 					{
 					pushFollow(FOLLOW_jumpUnc_in_line80);
-					jumpUnc();
+					jumpUnc1=jumpUnc();
 					state._fsp--;
 
-					env.debug("jump");
+					env.debug("jump to "+jumpUnc1);
 					}
 					break;
 				case 7 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:98: jumpCond
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:118: jumpCond
 					{
 					pushFollow(FOLLOW_jumpCond_in_line86);
 					jumpCond();
@@ -269,7 +271,7 @@ public class riskVParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:109: label
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:129: label
 					{
 					pushFollow(FOLLOW_label_in_line90);
 					label();
@@ -278,7 +280,7 @@ public class riskVParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:117: ERROR
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:46:137: ERROR
 					{
 					match(input,ERROR,FOLLOW_ERROR_in_line94); 
 					}
@@ -816,20 +818,20 @@ public class riskVParser extends Parser {
 		Variable v = null;
 
 
-		Token STRING1=null;
+		Token STRING2=null;
 
 		try {
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:140:2: ( STRING )
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:140:4: STRING
 			{
-			STRING1=(Token)match(input,STRING,FOLLOW_STRING_in_immediateVar404); 
+			STRING2=(Token)match(input,STRING,FOLLOW_STRING_in_immediateVar404); 
 
-						String type=env.checkVariable(STRING1.getText());
+						String type=env.checkVariable(STRING2.getText());
 						if(type!="ok"){
 							env.addError(type);
 						}
 						else{
-							v =env.getVariable(STRING1.getText());
+							v =env.getVariable(STRING2.getText());
 						}
 					
 			}
@@ -851,7 +853,7 @@ public class riskVParser extends Parser {
 	// $ANTLR start "jumpCond"
 	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:1: jumpCond : c= condition '\\n' j= jumpUnc ;
 	public final void jumpCond() throws RecognitionException {
-		Integer j =null;
+		String j =null;
 
 		try {
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:152:9: (c= condition '\\n' j= jumpUnc )
@@ -866,7 +868,7 @@ public class riskVParser extends Parser {
 			j=jumpUnc();
 			state._fsp--;
 
-			env.debug("jump to line "+j+" if condition is true");
+			env.debug("jump to "+j+" if condition is true");
 			}
 
 		}
@@ -883,21 +885,25 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "condition"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:154:1: condition : CMP register register ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:154:1: condition : CMP r1= register r2= register ;
 	public final void condition() throws RecognitionException {
+		String r1 =null;
+		String r2 =null;
+
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:2: ( CMP register register )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:4: CMP register register
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:2: ( CMP r1= register r2= register )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:155:4: CMP r1= register r2= register
 			{
 			match(input,CMP,FOLLOW_CMP_in_condition437); 
-			pushFollow(FOLLOW_register_in_condition439);
-			register();
-			state._fsp--;
-
 			pushFollow(FOLLOW_register_in_condition441);
-			register();
+			r1=register();
 			state._fsp--;
 
+			pushFollow(FOLLOW_register_in_condition445);
+			r2=register();
+			state._fsp--;
+
+			env.debug("comparing register "+r1+" to "+r2 );
 			}
 
 		}
@@ -914,9 +920,9 @@ public class riskVParser extends Parser {
 
 
 	// $ANTLR start "jumpUnc"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:157:1: jumpUnc returns [Integer line] : JMP labellino= STRING ;
-	public final Integer jumpUnc() throws RecognitionException {
-		Integer line = null;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:157:1: jumpUnc returns [String jumpto] : JMP labellino= STRING ;
+	public final String jumpUnc() throws RecognitionException {
+		String jumpto = null;
 
 
 		Token labellino=null;
@@ -925,10 +931,11 @@ public class riskVParser extends Parser {
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:158:2: ( JMP labellino= STRING )
 			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:158:4: JMP labellino= STRING
 			{
-			match(input,JMP,FOLLOW_JMP_in_jumpUnc455); 
-			labellino=(Token)match(input,STRING,FOLLOW_STRING_in_jumpUnc459); 
+			match(input,JMP,FOLLOW_JMP_in_jumpUnc460); 
+			labellino=(Token)match(input,STRING,FOLLOW_STRING_in_jumpUnc464); 
 
-					line =env.checkLabel(labellino);
+					Integer line=env.checkLabel(labellino);
+					jumpto =labellino.getText()+" at line "+line;
 				
 			}
 
@@ -940,23 +947,23 @@ public class riskVParser extends Parser {
 		finally {
 			// do for sure before leaving
 		}
-		return line;
+		return jumpto;
 	}
 	// $ANTLR end "jumpUnc"
 
 
 
 	// $ANTLR start "label"
-	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:162:1: label : s= STRING TWODOT ;
+	// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:163:1: label : s= STRING TWODOT ;
 	public final void label() throws RecognitionException {
 		Token s=null;
 
 		try {
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:162:8: (s= STRING TWODOT )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:162:11: s= STRING TWODOT
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:163:8: (s= STRING TWODOT )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:163:11: s= STRING TWODOT
 			{
-			s=(Token)match(input,STRING,FOLLOW_STRING_in_label473); 
-			match(input,TWODOT,FOLLOW_TWODOT_in_label475); 
+			s=(Token)match(input,STRING,FOLLOW_STRING_in_label478); 
+			match(input,TWODOT,FOLLOW_TWODOT_in_label480); 
 
 					env.addLabel(s);
 				
@@ -1024,10 +1031,10 @@ public class riskVParser extends Parser {
 	public static final BitSet FOLLOW_26_in_jumpCond421 = new BitSet(new long[]{0x0000000000001000L});
 	public static final BitSet FOLLOW_jumpUnc_in_jumpCond425 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_CMP_in_condition437 = new BitSet(new long[]{0x0000000002020000L});
-	public static final BitSet FOLLOW_register_in_condition439 = new BitSet(new long[]{0x0000000002020000L});
-	public static final BitSet FOLLOW_register_in_condition441 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_JMP_in_jumpUnc455 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_STRING_in_jumpUnc459 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_STRING_in_label473 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_TWODOT_in_label475 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_register_in_condition441 = new BitSet(new long[]{0x0000000002020000L});
+	public static final BitSet FOLLOW_register_in_condition445 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_JMP_in_jumpUnc460 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_STRING_in_jumpUnc464 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_STRING_in_label478 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_TWODOT_in_label480 = new BitSet(new long[]{0x0000000000000002L});
 }

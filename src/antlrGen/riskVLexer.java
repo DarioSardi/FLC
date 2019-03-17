@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/panda/Documenti/lab flc/RiskV/resources/riskV.g 2019-03-16 19:12:57
+// $ANTLR 3.5.1 /home/panda/Documenti/lab flc/RiskV/resources/riskV.g 2019-03-17 23:38:16
 
   package antlrGen;
   import extraClass.*;
@@ -97,8 +97,8 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = TWODOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:166:8: ( ':' )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:166:10: ':'
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:167:8: ( ':' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:167:10: ':'
 			{
 			match(':'); 
 			}
@@ -117,8 +117,8 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = CMP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:167:5: ( 'CMP' )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:167:7: 'CMP'
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:168:5: ( 'CMP' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:168:7: 'CMP'
 			{
 			match("CMP"); 
 
@@ -138,7 +138,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = DTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:168:7: ( 'DB' | 'DW' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:169:7: ( 'DB' | 'DW' )
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0=='D') ) {
@@ -172,14 +172,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt1) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:168:9: 'DB'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:169:9: 'DB'
 					{
 					match("DB"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:168:14: 'DW'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:169:14: 'DW'
 					{
 					match("DW"); 
 
@@ -201,7 +201,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = VTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:169:7: ( 'RESB' | 'RESW' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:170:7: ( 'RESB' | 'RESW' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='R') ) {
@@ -271,14 +271,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:169:9: 'RESB'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:170:9: 'RESB'
 					{
 					match("RESB"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:169:18: 'RESW'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:170:18: 'RESW'
 					{
 					match("RESW"); 
 
@@ -300,7 +300,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = RTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:170:7: ( 'DR' | 'DRR' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:7: ( 'DR' | 'DRR' )
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='D') ) {
@@ -339,14 +339,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt3) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:170:9: 'DR'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:9: 'DR'
 					{
 					match("DR"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:170:15: 'DRR'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:15: 'DRR'
 					{
 					match("DRR"); 
 
@@ -368,7 +368,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = JMP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:5: ( 'JMP' | 'JE' | 'JZ' | 'JNE' | 'JNZ' | 'JG' | 'JNLE' | 'JGE' | 'JNG' | 'JL' | 'JNGE' | 'JLE' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:5: ( 'JMP' | 'JE' | 'JZ' | 'JNE' | 'JNZ' | 'JG' | 'JNLE' | 'JGE' | 'JNG' | 'JL' | 'JNGE' | 'JLE' )
 			int alt4=12;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='J') ) {
@@ -481,84 +481,84 @@ public class riskVLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:7: 'JMP'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:7: 'JMP'
 					{
 					match("JMP"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:15: 'JE'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:15: 'JE'
 					{
 					match("JE"); 
 
 					}
 					break;
 				case 3 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:171:23: 'JZ'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:23: 'JZ'
 					{
 					match("JZ"); 
 
 					}
 					break;
 				case 4 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:3: 'JNE'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:173:3: 'JNE'
 					{
 					match("JNE"); 
 
 					}
 					break;
 				case 5 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:11: 'JNZ'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:173:11: 'JNZ'
 					{
 					match("JNZ"); 
 
 					}
 					break;
 				case 6 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:172:19: 'JG'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:173:19: 'JG'
 					{
 					match("JG"); 
 
 					}
 					break;
 				case 7 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:173:3: 'JNLE'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:174:3: 'JNLE'
 					{
 					match("JNLE"); 
 
 					}
 					break;
 				case 8 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:173:11: 'JGE'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:174:11: 'JGE'
 					{
 					match("JGE"); 
 
 					}
 					break;
 				case 9 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:173:19: 'JNG'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:174:19: 'JNG'
 					{
 					match("JNG"); 
 
 					}
 					break;
 				case 10 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:174:3: 'JL'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:175:3: 'JL'
 					{
 					match("JL"); 
 
 					}
 					break;
 				case 11 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:174:10: 'JNGE'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:175:10: 'JNGE'
 					{
 					match("JNGE"); 
 
 					}
 					break;
 				case 12 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:174:19: 'JLE'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:175:19: 'JLE'
 					{
 					match("JLE"); 
 
@@ -580,7 +580,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = ADDI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:177:6: ( 'addi' | 'ADDI' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:178:6: ( 'addi' | 'ADDI' )
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='a') ) {
@@ -598,14 +598,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt5) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:177:8: 'addi'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:178:8: 'addi'
 					{
 					match("addi"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:177:17: 'ADDI'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:178:17: 'ADDI'
 					{
 					match("ADDI"); 
 
@@ -627,7 +627,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = SUBI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:178:6: ( 'subi' | 'SUBI' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:179:6: ( 'subi' | 'SUBI' )
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='s') ) {
@@ -645,14 +645,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt6) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:178:8: 'subi'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:179:8: 'subi'
 					{
 					match("subi"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:178:17: 'SUBI'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:179:17: 'SUBI'
 					{
 					match("SUBI"); 
 
@@ -674,7 +674,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = ANDI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:179:6: ( 'andi' | 'ANDI' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:180:6: ( 'andi' | 'ANDI' )
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='a') ) {
@@ -692,14 +692,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt7) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:179:8: 'andi'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:180:8: 'andi'
 					{
 					match("andi"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:179:17: 'ANDI'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:180:17: 'ANDI'
 					{
 					match("ANDI"); 
 
@@ -721,7 +721,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = ORI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:180:5: ( 'ori' | 'ORI;' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:181:5: ( 'ori' | 'ORI;' )
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0=='o') ) {
@@ -739,14 +739,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt8) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:180:7: 'ori'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:181:7: 'ori'
 					{
 					match("ori"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:180:15: 'ORI;'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:181:15: 'ORI;'
 					{
 					match("ORI;"); 
 
@@ -768,7 +768,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = XORI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:181:6: ( 'xori' | 'XORI' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:182:6: ( 'xori' | 'XORI' )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='x') ) {
@@ -786,14 +786,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:181:8: 'xori'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:182:8: 'xori'
 					{
 					match("xori"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:181:18: 'XORI'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:182:18: 'XORI'
 					{
 					match("XORI"); 
 
@@ -815,7 +815,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:182:5: ( 'add' | 'ADD' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:183:5: ( 'add' | 'ADD' )
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0=='a') ) {
@@ -833,14 +833,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt10) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:182:7: 'add'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:183:7: 'add'
 					{
 					match("add"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:182:16: 'ADD'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:183:16: 'ADD'
 					{
 					match("ADD"); 
 
@@ -862,7 +862,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = SUB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:183:5: ( 'sub' | 'SUB' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:184:5: ( 'sub' | 'SUB' )
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0=='s') ) {
@@ -880,14 +880,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt11) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:183:7: 'sub'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:184:7: 'sub'
 					{
 					match("sub"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:183:16: 'SUB'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:184:16: 'SUB'
 					{
 					match("SUB"); 
 
@@ -909,7 +909,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = MUL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:184:5: ( 'mul' | 'MUL' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:185:5: ( 'mul' | 'MUL' )
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0=='m') ) {
@@ -927,14 +927,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt12) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:184:7: 'mul'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:185:7: 'mul'
 					{
 					match("mul"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:184:15: 'MUL'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:185:15: 'MUL'
 					{
 					match("MUL"); 
 
@@ -956,7 +956,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = XOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:185:5: ( 'xor' | 'XOR' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:186:5: ( 'xor' | 'XOR' )
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0=='x') ) {
@@ -974,14 +974,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt13) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:185:7: 'xor'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:186:7: 'xor'
 					{
 					match("xor"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:185:15: 'XOR'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:186:15: 'XOR'
 					{
 					match("XOR"); 
 
@@ -1003,7 +1003,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:186:4: ( 'or' | 'OR' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:187:4: ( 'or' | 'OR' )
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0=='o') ) {
@@ -1021,14 +1021,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt14) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:186:6: 'or'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:187:6: 'or'
 					{
 					match("or"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:186:14: 'OR'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:187:14: 'OR'
 					{
 					match("OR"); 
 
@@ -1050,7 +1050,7 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:187:5: ( 'and' | 'AND' )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:188:5: ( 'and' | 'AND' )
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0=='a') ) {
@@ -1068,14 +1068,14 @@ public class riskVLexer extends Lexer {
 
 			switch (alt15) {
 				case 1 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:187:7: 'and'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:188:7: 'and'
 					{
 					match("and"); 
 
 					}
 					break;
 				case 2 :
-					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:187:16: 'AND'
+					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:188:16: 'AND'
 					{
 					match("AND"); 
 
@@ -1097,10 +1097,10 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:188:5: ( ( '0' .. '9' )+ )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:188:11: ( '0' .. '9' )+
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:189:5: ( ( '0' .. '9' )+ )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:189:11: ( '0' .. '9' )+
 			{
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:188:11: ( '0' .. '9' )+
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:189:11: ( '0' .. '9' )+
 			int cnt16=0;
 			loop16:
 			while (true) {
@@ -1149,10 +1149,10 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:189:5: ( ( ' ' | '\\t' | '\\r' )+ )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:189:9: ( ' ' | '\\t' | '\\r' )+
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:190:5: ( ( ' ' | '\\t' | '\\r' )+ )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:190:9: ( ' ' | '\\t' | '\\r' )+
 			{
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:189:9: ( ' ' | '\\t' | '\\r' )+
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:190:9: ( ' ' | '\\t' | '\\r' )+
 			int cnt17=0;
 			loop17:
 			while (true) {
@@ -1202,16 +1202,16 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:196:8: ( ( 'a' .. 'z' )+ )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:196:10: ( 'a' .. 'z' )+
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:197:8: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:197:10: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			{
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:196:10: ( 'a' .. 'z' )+
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:197:10: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			int cnt18=0;
 			loop18:
 			while (true) {
 				int alt18=2;
 				int LA18_0 = input.LA(1);
-				if ( ((LA18_0 >= 'a' && LA18_0 <= 'z')) ) {
+				if ( ((LA18_0 >= 'A' && LA18_0 <= 'Z')||(LA18_0 >= 'a' && LA18_0 <= 'z')) ) {
 					alt18=1;
 				}
 
@@ -1219,7 +1219,7 @@ public class riskVLexer extends Lexer {
 				case 1 :
 					// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:
 					{
-					if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -1254,8 +1254,8 @@ public class riskVLexer extends Lexer {
 		try {
 			int _type = ERROR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:197:6: ( . )
-			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:197:8: .
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:198:6: ( . )
+			// /home/panda/Documenti/lab flc/RiskV/resources/riskV.g:198:8: .
 			{
 			matchAny(); 
 			System.out.println("what?...");
@@ -1444,99 +1444,136 @@ public class riskVLexer extends Lexer {
 
 	protected DFA19 dfa19 = new DFA19(this);
 	static final String DFA19_eotS =
-		"\1\uffff\1\27\2\uffff\4\25\1\41\1\25\1\41\1\25\1\41\1\25\1\41\1\25\1\41"+
-		"\1\25\15\uffff\2\41\3\uffff\1\41\1\uffff\2\64\1\41\1\uffff\1\41\2\uffff"+
-		"\1\72\1\74\1\72\1\74\2\100\1\65\2\uffff\2\103\1\53\1\75\1\uffff\1\76\3"+
-		"\uffff\1\101\2\uffff\1\104\2\uffff";
+		"\1\uffff\1\27\2\uffff\16\33\10\uffff\1\33\1\uffff\2\64\1\66\2\33\2\71"+
+		"\1\33\2\71\6\33\2\107\4\33\1\uffff\1\115\1\uffff\1\66\1\uffff\1\33\1\71"+
+		"\1\uffff\2\71\1\33\3\71\1\123\1\125\1\123\1\125\2\131\1\133\1\uffff\1"+
+		"\33\2\135\2\137\1\uffff\2\140\2\71\1\141\1\uffff\1\142\1\uffff\1\141\1"+
+		"\142\1\143\1\uffff\1\143\1\uffff\1\144\1\uffff\1\144\6\uffff";
 	static final String DFA19_eofS =
-		"\105\uffff";
+		"\145\uffff";
 	static final String DFA19_minS =
 		"\1\0\1\170\2\uffff\1\115\1\102\2\105\1\144\1\104\1\165\1\125\1\162\1\122"+
-		"\1\157\1\117\1\165\1\125\15\uffff\2\144\1\uffff\2\104\1\142\1\102\1\141"+
-		"\1\111\1\162\1\122\1\154\2\uffff\2\141\2\111\1\141\1\111\1\141\2\uffff"+
-		"\1\141\1\111\2\141\1\uffff\1\141\3\uffff\1\141\2\uffff\1\141\2\uffff";
+		"\1\157\1\117\1\165\1\125\10\uffff\1\120\1\uffff\3\101\1\123\1\120\2\101"+
+		"\1\105\2\101\2\144\2\104\1\142\1\102\2\101\1\162\1\122\1\154\1\114\1\uffff"+
+		"\1\101\1\uffff\1\101\1\uffff\1\102\1\101\1\uffff\2\101\1\105\12\101\1"+
+		"\uffff\1\73\4\101\1\uffff\5\101\1\uffff\1\101\1\uffff\3\101\1\uffff\1"+
+		"\101\1\uffff\1\101\1\uffff\1\101\6\uffff";
 	static final String DFA19_maxS =
 		"\1\uffff\1\170\2\uffff\1\115\1\127\1\105\1\132\1\156\1\116\1\165\1\125"+
-		"\1\162\1\122\1\157\1\117\1\165\1\125\15\uffff\2\144\1\uffff\2\104\1\142"+
-		"\1\102\1\172\1\111\1\162\1\122\1\154\2\uffff\2\172\2\111\1\172\1\111\1"+
-		"\172\2\uffff\1\172\1\111\2\172\1\uffff\1\172\3\uffff\1\172\2\uffff\1\172"+
-		"\2\uffff";
+		"\1\162\1\122\1\157\1\117\1\165\1\125\10\uffff\1\120\1\uffff\3\172\1\123"+
+		"\1\120\2\172\1\132\2\172\2\144\2\104\1\142\1\102\2\172\1\162\1\122\1\154"+
+		"\1\114\1\uffff\1\172\1\uffff\1\172\1\uffff\1\127\1\172\1\uffff\2\172\1"+
+		"\105\12\172\1\uffff\1\73\4\172\1\uffff\5\172\1\uffff\1\172\1\uffff\3\172"+
+		"\1\uffff\1\172\1\uffff\1\172\1\uffff\1\172\6\uffff";
 	static final String DFA19_acceptS =
-		"\2\uffff\1\2\1\3\16\uffff\1\24\1\25\1\26\1\27\1\1\1\24\1\2\1\3\1\4\1\5"+
-		"\1\7\1\6\1\10\2\uffff\1\26\11\uffff\1\20\1\25\7\uffff\1\22\1\14\4\uffff"+
-		"\1\16\1\uffff\1\23\1\11\1\13\1\uffff\1\17\1\12\1\uffff\1\21\1\15";
+		"\2\uffff\1\2\1\3\16\uffff\1\24\1\25\1\26\1\27\1\1\1\24\1\2\1\3\1\uffff"+
+		"\1\26\26\uffff\1\25\1\uffff\1\5\1\uffff\1\7\2\uffff\1\10\15\uffff\1\22"+
+		"\5\uffff\1\4\5\uffff\1\16\1\uffff\1\23\3\uffff\1\17\1\uffff\1\14\1\uffff"+
+		"\1\21\1\uffff\1\20\1\6\1\11\1\13\1\12\1\15";
 	static final String DFA19_specialS =
-		"\1\0\104\uffff}>";
+		"\1\0\144\uffff}>";
 	static final String[] DFA19_transitionS = {
 			"\11\25\1\23\1\2\2\25\1\23\22\25\1\23\17\25\1\1\11\22\1\3\6\25\1\11\1"+
-			"\25\1\4\1\5\5\25\1\7\2\25\1\21\1\25\1\15\2\25\1\6\1\13\4\25\1\17\10\25"+
-			"\1\10\13\24\1\20\1\24\1\14\3\24\1\12\4\24\1\16\2\24\uff85\25",
+			"\24\1\4\1\5\5\24\1\7\2\24\1\21\1\24\1\15\2\24\1\6\1\13\4\24\1\17\2\24"+
+			"\6\25\1\10\13\24\1\20\1\24\1\14\3\24\1\12\4\24\1\16\2\24\uff85\25",
 			"\1\26",
 			"",
 			"",
 			"\1\32",
-			"\1\33\17\uffff\1\34\4\uffff\1\33",
-			"\1\35",
-			"\1\36\1\uffff\1\36\4\uffff\3\36\13\uffff\1\36",
-			"\1\37\11\uffff\1\40",
-			"\1\42\11\uffff\1\43",
-			"\1\44",
-			"\1\45",
-			"\1\46",
-			"\1\47",
-			"\1\50",
-			"\1\51",
+			"\1\34\17\uffff\1\36\4\uffff\1\35",
+			"\1\37",
+			"\1\41\1\uffff\1\44\4\uffff\1\45\1\40\1\43\13\uffff\1\42",
+			"\1\46\11\uffff\1\47",
+			"\1\50\11\uffff\1\51",
 			"\1\52",
 			"\1\53",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
+			"\1\54",
 			"\1\55",
 			"\1\56",
-			"",
 			"\1\57",
 			"\1\60",
 			"\1\61",
-			"\1\62",
-			"\10\41\1\63\21\41",
-			"\1\65",
-			"\1\66",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\63",
+			"",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\21\33\1\65\10\33\6\uffff\32\33",
 			"\1\67",
 			"\1\70",
-			"",
-			"",
-			"\10\41\1\71\21\41",
-			"\10\41\1\73\21\41",
-			"\1\75",
-			"\1\76",
-			"\10\41\1\77\21\41",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\1\72\1\uffff\1\75\4\uffff\1\74\15\uffff\1\73",
+			"\4\33\1\76\25\33\6\uffff\32\33",
+			"\4\33\1\77\25\33\6\uffff\32\33",
+			"\1\100",
 			"\1\101",
-			"\32\41",
-			"",
-			"",
-			"\10\41\1\102\21\41",
+			"\1\102",
+			"\1\103",
 			"\1\104",
-			"\32\41",
-			"\32\41",
+			"\1\105",
+			"\32\33\6\uffff\10\33\1\106\21\33",
+			"\10\33\1\110\21\33\6\uffff\32\33",
+			"\1\111",
+			"\1\112",
+			"\1\113",
+			"\1\114",
 			"",
-			"\32\41",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\1\116\24\uffff\1\117",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\1\120",
+			"\4\33\1\121\25\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\10\33\1\122\21\33",
+			"\32\33\6\uffff\10\33\1\124\21\33",
+			"\10\33\1\126\21\33\6\uffff\32\33",
+			"\10\33\1\127\21\33\6\uffff\32\33",
+			"\32\33\6\uffff\10\33\1\130\21\33",
+			"\10\33\1\132\21\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\1\133",
+			"\32\33\6\uffff\10\33\1\134\21\33",
+			"\10\33\1\136\21\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
+			"",
+			"\32\33\6\uffff\32\33",
 			"",
 			"",
 			"",
-			"\32\41",
 			"",
-			"",
-			"\32\41",
 			"",
 			""
 	};
@@ -1601,8 +1638,8 @@ public class riskVLexer extends Lexer {
 						else if ( (LA19_0=='M') ) {s = 17;}
 						else if ( ((LA19_0 >= '1' && LA19_0 <= '9')) ) {s = 18;}
 						else if ( (LA19_0=='\t'||LA19_0=='\r'||LA19_0==' ') ) {s = 19;}
-						else if ( ((LA19_0 >= 'b' && LA19_0 <= 'l')||LA19_0=='n'||(LA19_0 >= 'p' && LA19_0 <= 'r')||(LA19_0 >= 't' && LA19_0 <= 'w')||(LA19_0 >= 'y' && LA19_0 <= 'z')) ) {s = 20;}
-						else if ( ((LA19_0 >= '\u0000' && LA19_0 <= '\b')||(LA19_0 >= '\u000B' && LA19_0 <= '\f')||(LA19_0 >= '\u000E' && LA19_0 <= '\u001F')||(LA19_0 >= '!' && LA19_0 <= '/')||(LA19_0 >= ';' && LA19_0 <= '@')||LA19_0=='B'||(LA19_0 >= 'E' && LA19_0 <= 'I')||(LA19_0 >= 'K' && LA19_0 <= 'L')||LA19_0=='N'||(LA19_0 >= 'P' && LA19_0 <= 'Q')||(LA19_0 >= 'T' && LA19_0 <= 'W')||(LA19_0 >= 'Y' && LA19_0 <= '`')||(LA19_0 >= '{' && LA19_0 <= '\uFFFF')) ) {s = 21;}
+						else if ( (LA19_0=='B'||(LA19_0 >= 'E' && LA19_0 <= 'I')||(LA19_0 >= 'K' && LA19_0 <= 'L')||LA19_0=='N'||(LA19_0 >= 'P' && LA19_0 <= 'Q')||(LA19_0 >= 'T' && LA19_0 <= 'W')||(LA19_0 >= 'Y' && LA19_0 <= 'Z')||(LA19_0 >= 'b' && LA19_0 <= 'l')||LA19_0=='n'||(LA19_0 >= 'p' && LA19_0 <= 'r')||(LA19_0 >= 't' && LA19_0 <= 'w')||(LA19_0 >= 'y' && LA19_0 <= 'z')) ) {s = 20;}
+						else if ( ((LA19_0 >= '\u0000' && LA19_0 <= '\b')||(LA19_0 >= '\u000B' && LA19_0 <= '\f')||(LA19_0 >= '\u000E' && LA19_0 <= '\u001F')||(LA19_0 >= '!' && LA19_0 <= '/')||(LA19_0 >= ';' && LA19_0 <= '@')||(LA19_0 >= '[' && LA19_0 <= '`')||(LA19_0 >= '{' && LA19_0 <= '\uFFFF')) ) {s = 21;}
 						if ( s>=0 ) return s;
 						break;
 			}

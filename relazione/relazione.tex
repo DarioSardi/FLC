@@ -44,6 +44,23 @@ commentstyle=\color{comment},    % comment style
 stringstyle=\color{blue}    % string literal style
 }
 
+\lstdefinestyle{ANTLR}{
+    basicstyle=\fontsize{9}{11}\ttfamily\color{black},%
+    breaklines=true,%                                      allow line breaks
+    moredelim=[s][\color{green!50!black}\ttfamily]{'}{'},% single quotes in green
+    moredelim=*[s][\color{black}\ttfamily]{options}{\}},%  options in black (until trailing })
+    commentstyle={\color{gray}\itshape},%                  gray italics for comments
+    morecomment=[l]{//},%                                  define // comment
+    emph=[1]{%
+    TWODOT,CMP,DTYPE,VTYPE,RTYPE,JMP,ADDI,SUBI,ANDI,ORI,XORI,ADD,SUB,MUL,XOR,OR,AND,INT,WS,STRING,ERROR%                                      literal strings listed here
+        },emphstyle=[1]{\color{blue}\ttfamily},%              and formatted in blue
+    emph=[2]{start,line,defineVar,reserveVar,defineRegister,r3IType,r3Type,f3,fI,register,immediateVar,jumpCond,condition,jumpUnc,label
+        },emphstyle=[2]{\color{purple}\ttfamily},
+    alsoletter={:,|,;},%
+    morekeywords={:,|,;},%                                 define the special characters
+    keywordstyle={\color{black}},%                         and format them in black
+}
+
 
 
 
@@ -125,7 +142,6 @@ created OR between 12 and 2 to be saved at 5
 added label li
 created ADD between 7 and 5 to be saved at 22
 created AND between 7 and 5 to be saved at 23
-label check for li
 jump to line 3 if condition is true
 created OR between 22 and 23 to be saved at 24
 <@\textcolor{purple}{----- PARSING DONE -------}@>
@@ -313,13 +329,182 @@ L'utilizzo di variabili errate è contemplato e causa l'interruzione del parsing
     1.	at line 3 using a non register variable
 \end{lstlisting}
 
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Loop}
+\section{Jump}
+Sono state implementate chiamate di salto condizionate e non, non prevedendo chiamate a label non ancora definiti (jump ahead).
+Le jump consistono in un label definito come una stringa seguita da due punti e una chiamata di salto al label stesso.
+\\Chiamate incondizionate si effettuano tramite "JMP" seguito dal label desiderato:
+\begin{lstlisting}[caption=input]
+    <@\textcolor{orange}{jumplabel}@> :
+    DR reg 0x10
+    ADD reg reg 0x20
+    JMP <@\textcolor{orange}{jumplabel}@>
+\end{lstlisting}
+
+\begin{lstlisting}[caption=output]
+    <@\textcolor{purple}{ ----- PARSING STARTED------- }@>
+    added label <@\textcolor{orange}{jumplabel}@>
+    defined new Register variable with value 10 
+     named reg
+    created ADD between 10 and 20 to be saved at 10
+    jump to <@\textcolor{orange}{jumplabel}@> at line 1
+    <@\textcolor{purple}{----- PARSING DONE -------}@>
+\end{lstlisting}
+Per salti condizionati si ha una comparazione fra valori di registro che nel caso risulti corretta permette il salto.
+\\funzioni di comparazione possono essere:
+\begin{enumerate}
+    \item JE/JZ     Jump Equal or Jump Zero
+    \item JNE/JNZ 	Jump not Equal or Jump Not Zero
+    \item JG/JNLE 	Jump Greater or Jump Not Less/Equal 
+    \item JGE 	    Jump Greater/Equal
+    \item JL/JNGE 	Jump Less or Jump Not Greater/Equal
+    \item JLE/JNG 	Jump Less/Equal or Jump Not Greater
+\end{enumerate}
+Esempio di salto condizionato:
+\begin{lstlisting}[caption=input]
+    <@\textcolor{orange}{jumplabel}@> :
+    DR reg 0x10
+    ADD reg reg 0x20
+    CMP 0x10 0x11
+    JNE <@\textcolor{orange}{jumplabel}@>
+\end{lstlisting}
+\begin{lstlisting}[caption=output]
+    <@\textcolor{purple}{ ----- PARSING STARTED------- }@>
+    added label <@\textcolor{orange}{jumplabel}@>
+    defined new Register variable with value 10 
+     named reg
+    created ADD between 10 and 20 to be saved at 10
+    comparing register 10 to 11
+    jump to <@\textcolor{orange}{jumplabel}@> at line 1
+     if condition is true
+    <@\textcolor{purple}{----- PARSING DONE -------}@>
+\end{lstlisting}
 
 
+
+
+\newpage
 \subsection{Error Handling}
+Nel caso di label ripetuti solo il primo viene considerato e i successivi vengono ignorati.
+\begin{lstlisting}[caption=input]
+    <@\textcolor{orange}{jumplabel}@> :
+    DR reg 0x10
+    ADD reg reg 0x20
+    <@\textcolor{orange}{jumplabel}@> :
+    CMP 0x10 0x11
+    JNE <@\textcolor{orange}{jumplabel}@>
+\end{lstlisting}
+\begin{lstlisting}[caption=output]
+    <@\textcolor{purple}{ ----- PARSING STARTED------- }@>
+    added label <@\textcolor{orange}{jumplabel}@>
+    defined new Register variable with value 10 
+     named reg
+    created ADD between 10 and 20 to be saved at 10
+    comparing register 10 to 11
+    jump to <@\textcolor{orange}{jumplabel}@> at line 1
+     if condition is true
+    <@\textcolor{purple}{----- PARSING DONE -------}@>
+    <@\textcolor{red}{ERRORS:}@>
+    1.	label 'jumplabel' at line 4 already exist, 
+        ignoring it.
+\end{lstlisting}
+Nel caso di salti a label non esistenti il programma si interrompe segnalando l'errore.
+\begin{lstlisting}[caption=input]
+    <@\textcolor{orange}{jumplabel}@> :
+    DR reg 0x10
+    ADD reg reg 0x20
+    CMP 0x10 0x11
+    JNE <@\textcolor{orange}{somewhere}@>
+\end{lstlisting}
+\begin{lstlisting}[caption=output]
+    <@\textcolor{purple}{ ----- PARSING STARTED------- }@>
+    added label <@\textcolor{orange}{jumplabel}@>
+    defined new Register variable with value 10 
+     named reg
+    created ADD between 10 and 20 to be saved at 10
+    comparing register 10 to 11
+    
+    #############################
+    #  ERROR! PARSING STOPPED!  #
+    #############################
+    <@\textcolor{red}{ERRORS:}@>
+    1.	Label <@\textcolor{orange}{somewhere}@> at line 5 does not exist! 
+        STOPPING PARSER!
+\end{lstlisting}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ANTLR grammatica}
+Variabili dichiarate per il lexer
+\begin{lstlisting}[style=ANTLR,caption=lexer]
+    
+TWODOT	:	':';
+CMP	:	'CMP';
+DTYPE	:	'DB'|'DW';
+VTYPE	:	'RESB' | 'RESW';
+RTYPE	:	'DR'| 'DRR';
+JMP	:	'JMP' | 'JE'  | 'JZ' | 
+		'JNE' | 'JNZ' | 'JG' | 
+		'JNLE'| 'JGE' | 'JNG'| 
+		'JL'  |'JNGE' | 'JLE';
+ADDI	:	'addi'	| 'ADDI';
+SUBI	:	'subi'	| 'SUBI';
+ANDI	:	'andi'	| 'ANDI';
+ORI	:	'ori'	| 'ORI;';
+XORI	:	'xori'  | 'XORI'; 
+ADD	:	'add' 	| 'ADD';
+SUB	:	'sub' 	| 'SUB';
+MUL	:	'mul'	| 'MUL';
+XOR	:	'xor'	| 'XOR';
+OR	:	'or' 	| 'OR';
+AND	:	'and' 	| 'AND';
+INT	:    	('0'..'9')+;
+WS      :   (
+        ' '
+        |'\t'
+            | '\r'
+            )+ {$channel=HIDDEN;}
+        ;
 
+STRING	:	('a'..'z'|'A'..'Z')+;
+ERROR : . {System.out.println("what?...");} ;
+\end{lstlisting}
+\newpage
+Il parser inizia considerando come istruzioni valide funzioni, dichiarazioni di variabili, label e jump separate dal terminatore di linea.
+La grammatica priva delle parti relative a java si presenta cosi: 
+\begin{lstlisting}[style=ANTLR,caption=parser]
+    
+start           : line* ;
 
+line            : (r3Type | r3IType | defineVar | reserveVar | 
+                  defineRegister | jumpUnc | jumpCond | label
+                  | ERROR ) '\n';
+
+defineVar       : DTYPE STRING INT ;
+	
+reserveVar      : VTYPE STRING ;
+    
+defineRegister	: RTYPE STRING register ;
+
+r3IType	        : fI register register ( immediateVar | INT );
+
+r3Type      	: f3 register register register ;
+
+f3              : ADD | SUB | MUL | XOR | OR | AND ;
+
+fI              : ADDI | ANDI | ORI | SUBI | XORI ; 
+
+register        : '0x' INT  | STRING ;
+		
+immediateVar    : STRING ;
+
+jumpCond        : condition '\n' jumpUnc  ;
+
+condition       : CMP register register ;
+
+jumpUnc         : JMP STRING ;
+	
+label 	        : STRING TWODOT ;
+\end{lstlisting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
