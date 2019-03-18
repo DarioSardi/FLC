@@ -170,7 +170,7 @@ created AND between 7 and 45 to be saved at 23
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Registri e immediati}
-Per le specifiche scelte per questo progetto si prevede l'esistenza di 30 registri indirizzabili attraverso la sequenza '0xNumeroDiRegistro' dove il numero del registro è un numero intero compreso fra 0 e 30.
+Le specifiche scelte per questo progetto prevedono 30 registri indirizzabili attraverso la sequenza '0xNumeroDiRegistro' dove il numero del registro è un numero intero compreso fra 0 e 30.
 \\La scelta del prefisso è stata dettata dalla necessità di distinguere numeri interi e numeri dei registri durante il parsing e rendere il meno confusionario possibile il codice.
 \\Per quanto riguarda gli immediati è stata prevista la dimensione massima di una word su ISA RISC-V equivalente al valore decimale 4096.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,20 +180,20 @@ La sintassi per dichiarare il nome di un registro è:
 \begin{lstlisting}[numbers=none]
     <@\textcolor{purple}{DR}@> <@\textcolor{orange}{etichetta}@> <@\textcolor{blue}{0xNumeroDiRegistro}@>
 \end{lstlisting}
-Una definizione valida può dunque essere
+Una definizione valida può essere dunque:
 \begin{lstlisting}[numbers=none]
     <@\textcolor{purple}{DR}@> <@\textcolor{orange}{RegistroA}@> <@\textcolor{blue}{0x9}@>
 \end{lstlisting}
 Si ricorda che il valore massimo assegnabile ad un registro è pari a 0x30 per specifiche precedentemente definite.
 Per quanto riguarda le variabili, si possono creare variabili numeriche statiche di tipo Byte e Word.
 Risulta possibile riservare una variabile senza inizializzarla attraverso il comando RESB per riservare un Byte  e RESW per riservare una Word.
-Esempio di variabili riservate sono
+\\Esempio di variabili riservate sono:
 \begin{lstlisting}[numbers=none]
     <@\textcolor{purple}{RESW}@> <@\textcolor{orange}{valoreMassimo}@>
     <@\textcolor{purple}{RESB}@> <@\textcolor{orange}{threshold}@>
 \end{lstlisting}
 Questa operazione è stata introdotta per una implementazione futura dove variabili dinamiche potranno essere assegnate o variate utilizzandole come destinazione all'interno di funzioni.
-Il comando attualmente utile risulta essere la dichiarazione di una variabile con relativa inizializzazione effettuabile tramite
+Il comando attualmente utile risulta essere la dichiarazione di una variabile con relativa inizializzazione effettuabile tramite:
 \begin{lstlisting}[numbers=none]
     <@\textcolor{purple}{DW}@> <@\textcolor{orange}{valoreMassimo}@> <@\textcolor{blue}{3623}@>
     <@\textcolor{purple}{DB}@> <@\textcolor{orange}{threshold}@> <@\textcolor{blue}{90}@>
@@ -202,7 +202,7 @@ Il comando attualmente utile risulta essere la dichiarazione di una variabile co
 
 \subsection{Error handling}
 Nel caso di una dichiarazione di variabile troppo grande il programma risponderà settando la variabile a 0 e proseguendo normalmente.
-\\Esempi di input-output possibili sono
+\\Esempi di input-output possibili sono:
 \begin{lstlisting}[caption=input]
     <@\textcolor{purple}{DW}@> <@\textcolor{orange}{ciao}@> <@\textcolor{blue}{5400}@>
 \end{lstlisting}
@@ -215,7 +215,7 @@ Nel caso di una dichiarazione di variabile troppo grande il programma risponder�
    1.	variable value is not Word type
         (max value 4096), <@\textcolor{orange}{ciao}@> set to 0
 \end{lstlisting}
-Oppure 
+Oppure:
 \begin{lstlisting}[caption=input]
     <@\textcolor{purple}{DB}@> <@\textcolor{orange}{ciao}@> <@\textcolor{blue}{300}@>
 \end{lstlisting}
@@ -229,7 +229,7 @@ Oppure
         (max value 256), <@\textcolor{orange}{ciao}@> set to 0
 \end{lstlisting}
 \newpage
-Altro errore può verificarsi nella dichiarazione di un registro dal numero superiore al 30
+Altro errore può verificarsi nella dichiarazione di un registro dal numero superiore al 30 come ad esempio:
 
 \begin{lstlisting}[caption=input]
     <@\textcolor{purple}{DR}@> <@\textcolor{orange}{reg1}@> <@\textcolor{blue}{0x50}@>
@@ -277,7 +277,7 @@ Le funzioni previste sono le seguenti:
     \item \textcolor{purple}{R-Type: ADD,SUB,MUL,OR,XOR,AND}
     \item \textcolor{purple}{I-Type: ADDI,SUBI,ORI,XORI,ANDI}
 \end{enumerate}
-Esempi di funzioni sono 
+Esempi di funzioni sono :
 \begin{lstlisting}[caption=input]
     <@\textcolor{purple}{ADDI}@> <@\textcolor{blue}{0x10 0x01}@> <@\textcolor{orange}{12}@>
     <@\textcolor{purple}{OR}@> <@\textcolor{blue}{0x05 0x12 0x02}@>
@@ -352,7 +352,7 @@ Le jump consistono in un label definito come una stringa seguita da due punti e 
     <@\textcolor{purple}{----- PARSING DONE -------}@>
 \end{lstlisting}
 Per salti condizionati si ha una comparazione fra valori di registro che nel caso risulti corretta permette il salto.
-\\funzioni di comparazione possono essere:
+\\Funzioni di comparazione possono essere:
 \begin{enumerate}
     \item JE/JZ     Jump Equal or Jump Zero
     \item JNE/JNZ 	Jump not Equal or Jump Not Zero
@@ -436,7 +436,7 @@ Nel caso di salti a label non esistenti il programma si interrompe segnalando l'
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ANTLR grammatica}
-Variabili dichiarate per il lexer
+Variabili dichiarate per il lexer:
 \begin{lstlisting}[style=ANTLR,caption=lexer]
     
 TWODOT	:	':';
